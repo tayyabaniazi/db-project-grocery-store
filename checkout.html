@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - Fresh Mart</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><h2>Fresh Mart</h2></div>
+    <ul>
+      <li><a href="index.html"><h3>Home</h3></a></li>
+      <li><a href="about.html"><h3>About Us</h3></a></li>
+      <li><a href="contact.html"><h3>Contact</h3></a></li>
+      <li><a href="login.html"><h3>Login</h3></a></li>
+      <li><a href="cart.html"><h3>Cart</h3></a></li>
+    </ul>
+  </nav>
+  
+
+  <!-- Main checkout section -->
+  <main class="checkout-wrapper">
+    <!-- Shipping Info -->
+    <section class="customer-info">
+      <h2>Shipping Information</h2>
+      <form id="shipping-form">
+        <input type="text" placeholder="Full Name" required />
+        <input type="text" placeholder="Address" required />
+        <input type="text" placeholder="City" required />
+        <input type="text" placeholder="Postal Code" required />
+        <input type="text" placeholder="Country" required />
+      </form>
+    </section>
+
+    <!-- Payment method -->
+    <section class="checkout-section">
+      <h2>Payment Method</h2>
+      <select id="payment">
+        <option>Cash on Delivery</option>
+        <option>Credit Card</option>
+        <option>UPI</option>
+      </select>
+    </section>
+
+    <!-- Order Summary -->
+    <section class="order-summary">
+      <h2>Order Summary</h2>
+      <div id="order-summary" class="summary-items"></div>
+      <p><strong>Total:</strong> <span id="total-amount">$0.00</span></p>
+      <button id="place-order-btn" class="place-order-btn">Place Order</button>
+    </section>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
+

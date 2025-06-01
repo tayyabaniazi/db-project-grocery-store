@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Mart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Fresh Mart</div>
+    <input type="text" placeholder="Search..." class="search-bar" />
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" onclick="openModal('login-modal')">Login</a></li>
+      
+      <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+       <li><a href="login-choice.html">Admin-panel</a></li>
+     
+
+    </ul>
+  </nav>
+
+  <!-- PRODUCTS -->
+
+   <section class="hero-section">
+    <div class="hero-content">
+      <h1>Fresh Groceries<br>Delivered to Your Door</h1>
+      <p>Shop the freshest ingredients for your family at unbeatable prices</p>
+      <a href="#" class="hero-btn">Shop Now</a>
+    </div>
+  </section>
+
+ <section class="product-list" id="productList">
+  <!-- Products from localStorage will load here -->
+</section>
+<script>
+window.addEventListener("DOMContentLoaded", function () {
+  const stored = JSON.parse(localStorage.getItem("products")) || [];
+  const container = document.getElementById("productList");
+
+  if (stored.length && container) {
+    container.innerHTML = "";
+    stored.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <img src="images/${p.name.toLowerCase()}.jpg" alt="${p.name}" />
+        <h3>${p.name}</h3>
+        <p>Price: $${p.price}</p>
+        <button onclick="addToCart('${p.name}', ${p.price})">Add to Cart</button>
+      `;
+      container.appendChild(div);
+    });
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+      
+     
+  
+ 
+
+
+<!-- SHOP BY CATEGORY -->
+<section class="section-title">
+  <h2>Shop by Category</h2>
+</section>
+<section class="category-list">
+  <div class="category-box">
+    <img src="images/fruits.jpg" alt="Fruits">
+    <p>Fruits</p>
+  </div>
+  <div class="category-box">
+    <img src="images/veges.jpg" alt="Vegetables">
+    <p>Vegetables</p>
+  </div>
+  <div class="category-box">
+    <img src="images/dairy products.jpeg" alt="Dairy">
+    <p>Dairy</p>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="section-title">
+  <h2>Featured Products</h2>
+</section>
+<section class="product-list">
+  <div class="product">
+    <img src="images/oranges.jpg" alt="Orange" />
+    <h3>Orange</h3>
+    <p>Price: $1.20</p>
+     
+    <button onclick="addToCart('Orange', 1.20, 'images/orange.png')">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="images/tomatoes.jpg" alt="Tomato" />
+    <h3>Tomato</h3>
+    <p>Price: $0.80</p>
+    
+    <button onclick="addToCart('Tomato', 0.80, 'images/tomato.png')">Add to Cart</button>
+  </div>
+</section>
+
+<!-- SPECIAL OFFERS -->
+<section class="section-title">
+  <h2>Special Offers</h2>
+</section>
+<section class="product-list">
+  <div class="product special">
+    <img src="images/bread.jpg" alt="Bread Offer" />
+    <h3>Bread (Buy 1 Get 1)</h3>
+    <p><del>$3.00</del> <strong>$3.00 for 2</strong></p>
+     
+    <button onclick="addToCart('Milk Offer', 3, 'images/discount-bread.jpg')">Add to Cart</button>
+  </div>
+</section>
+
+
+
+
+
+
+
+    <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+         
+
+          <li><a href="index.html">Products</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="cart.html">Shopping Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Fruits</a></li>
+          <li><a href="#">Vegetables</a></li>
+          <li><a href="#">Dairy & Eggs</a></li>
+          <li><a href="#">Bakery</a></li>
+          <li><a href="#">Meat & Seafood</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p><img src="images/location icon.png" alt="Location" class="icon"> 123 Grocery Street<br>Fresh City, FC 12345</p>
+        <p><img src="images/phone icon.jpg" alt="Phone" class="icon"> (123) 456-7890</p>
+        <p><img src="images/mail icon.png" alt="Email" class="icon"> info@freshmart.com</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Newsletter</h3>
+        <p>Subscribe to our newsletter for updates and promotions</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit">
+            <img src="images/send icon.png" alt="Send" class="send-icon">
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="images/facebook icon.jpg" target="_blank">
+          <img src="images/facebook icon.jpg" alt="Facebook">
+        </a>
+        <a href="images/twitter icon.png" target="_blank">
+          <img src="images/twitter icon.png" alt="Twitter">
+        </a>
+        <a href="images/instagram icon.jpg" target="_blank">
+          <img src="images/instagram icon.jpg" alt="Instagram">
+        </a>
+        <a href="images/pinterest icon.png" target="_blank">
+          <img src="images/pinterest icon.png" alt="Pinterest">
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 FreshMart. All Rights Reserved.</p>
+    </div>
+
+     <script src="cart.js"></script>
+  </footer>
+
+</body>
+</html>
+

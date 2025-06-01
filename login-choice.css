@@ -1,0 +1,53 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-choice-container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+}
+
+h1 {
+  color: #2e8b57;
+  margin-bottom: 2rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.customer-btn {
+  background-color: #2e8b57;
+}
+
+.customer-btn:hover {
+  background-color: #276746;
+}
+
+.admin-btn {
+  background-color: #555;
+}
+
+.admin-btn:hover {
+  background-color: #333;
+}

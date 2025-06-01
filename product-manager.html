@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="product-manager.css">
+</head>
+<body>
+
+<!-- ✅ Home Page Navbar -->
+<nav class="navbar">
+    <div class="logo"><h2>Fresh Mart</h2></div>
+    <ul>
+        <li><a href="index.html"><h3>Home</h3></a></li>
+        <li><a href="about.html"><h3>About Us</h3></a></li>
+        <li><a href="contact.html"><h3>Contact</h3></a></li>
+        <li><a href="login.html"><h3>Login</h3></a></li>
+        <li><a href="cart.html"><h3>Cart</h3></a></li>
+    </ul>
+</nav>
+
+<!-- Product Manager Content -->
+<div class="container">
+    
+    <div class="header-bar">
+ <h2>Product Manager</h2>
+  <button class="history-btn" onclick="window.location.href='history.html'">🕒 History</button>
+</div>
+
+    <form id="productForm">
+        <input type="hidden" id="productId">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="number" id="productPrice" placeholder="Product Price" required>
+        <button type="submit">Save Product</button>
+    </form>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Products will be listed here -->
+        </tbody>
+    </table>
+</div>
+
+<script src="product-manager.js" defer></script>
+</body>
+</html>
+

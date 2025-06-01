@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f0f2f5;
+}
+
+.navbar {
+  background: #0a693a;
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.history-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.order {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.order h3 {
+    margin: 0;
+    color: #27ae60;
+}
+
+.order ul {
+    padding-left: 20px;
+}
+
+.order ul li {
+    margin: 5px 0;
+}
+
+
+
+
+
+.edit-btn, .delete-btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #2980b9;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 0.85;
+}
+
+.edit-btn, .delete-btn {
+  background-color: #0a693a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px 5px 0 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  background-color: #05532d;
+}
